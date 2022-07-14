@@ -22,3 +22,8 @@ b{
 #resetBtn{
     margin-left: 20px;
 }
+#className{
+    width: 640px;
+    height: 40px;
+    font-size: 25px;
+}
