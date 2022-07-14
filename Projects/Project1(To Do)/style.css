@@ -1,0 +1,11 @@
+.main{
+    background-color:black;
+}
+#maincard,.card-body{
+    color: white;
+    background-color: black;
+}
+#notes,h1{
+    text-align: center;
+    color:white;
+}

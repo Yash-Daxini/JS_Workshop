@@ -1,0 +1,13 @@
+.container{
+	display: flex;
+	justify-content: center;
+}
+body{
+	background-color: black;
+}
+#img{
+	position: absolute;
+}
+#food{
+	position: absolute;
+}

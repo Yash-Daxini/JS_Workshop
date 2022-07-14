@@ -1,0 +1,30 @@
+body{
+    background-color: red;
+}
+.container,h1{
+    text-align: center;
+}
+
+.whiteBoxes{
+    background-color: white;
+    position: relative;
+    width: 250px;
+    height: 250px;
+}
+
+.imgBox{
+    background-image: url('Infinity.jpg');
+    position: relative;
+    width: 250px;
+    height: 250px;
+    cursor: pointer;
+}
+
+.boxes{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    column-gap: 40px;
+    align-items: center;
+    align-content: center;
+}
