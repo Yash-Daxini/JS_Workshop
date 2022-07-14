@@ -1,0 +1,22 @@
+.btn{
+    width: 140px;
+    height: 64px;
+    border-radius: 10px;
+}
+.container{
+    text-align: center;
+}
+.button{
+    display: flex;
+    justify-content: center;
+}
+.display{
+    width: 565px;
+    height: 60px;
+    border: solid 2px black;
+    font-size: 40px;
+}
+.bodyb{
+    background-color: black;
+    color: white;
+}
