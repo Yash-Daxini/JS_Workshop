@@ -21,7 +21,8 @@ function match() {
             clearInterval(d);
             clearInterval(t);
             clearInterval(d);
-            document.write("Winner");
+            main.innerHTML = "";
+            main.innerHTML = `<h1 style="text-align:center ; color : white">Winner</br> ${count}</h1>`
         }
         let counter = document.getElementById('counter');
         counter.innerHTML = count;
@@ -75,6 +76,7 @@ function rightMove() {
     clearInterval(l);
     clearInterval(d);
     clearInterval(t);
+    clearInterval(r);
     r = setInterval(rightMoveInterval, 1);
 }
 
@@ -82,6 +84,7 @@ function leftMove() {
     clearInterval(r);
     clearInterval(d);
     clearInterval(t);
+    clearInterval(l);
     l = setInterval(leftMoveInterval, 1);
 }
 
@@ -89,6 +92,7 @@ function topMove() {
     clearInterval(l);
     clearInterval(r);
     clearInterval(d);
+    clearInterval(t);
     t = setInterval(topMoveInterval, 1);
 }
 
@@ -96,14 +100,18 @@ function downMove() {
     clearInterval(l);
     clearInterval(r);
     clearInterval(t);
+    clearInterval(d);
     d = setInterval(downMoveInterval, 1);
 }
 
 function rightMoveInterval() {
+    img.style.transform =  "rotatey(180deg)";
     match();
     left++;
-    if (left > screen.availWidth - 50) {
+    if (left > screen.availWidth - 100) {
         clearInterval(r);
+        main.innerHTML = "";
+        main.innerHTML = `<h1 style="text-align:center ; color : white">Game Over </br> ${count}</h1>`
     }
     // console.log(left + " " + x + uppper + " " + y);
     img.style.left = left + "px";
@@ -112,10 +120,13 @@ function rightMoveInterval() {
 
 
 function leftMoveInterval() {
+    img.style.transform =  "rotatey(0deg)";
     match();
     left--;
     if (left <= 0) {
         clearInterval(l);
+        main.innerHTML = "";
+        main.innerHTML = `<h1 style="text-align:center ; color : white">Game Over </br> ${count}</h1>`
     }
     // console.log(left);
     img.style.left = left + "px";
@@ -123,24 +134,29 @@ function leftMoveInterval() {
 
 
 function downMoveInterval() {
+    img.style.transform =  "rotatez(45deg)";
     match();
     uppper++;
     if (uppper > screen.availHeight - 150) {
         clearInterval(d);
+        main.innerHTML = "";
+        main.innerHTML = `<h1 style="text-align:center ; color : white">Game Over </br> ${count}</h1>`
     }
     // console.log(uppper);
     img.style.top = uppper + "px";
 }
 
 function topMoveInterval() {
+    img.style.transform =  "rotatez(90deg)";
     match();
     uppper--;
     if (uppper <= 0) {
         clearInterval(t);
+        main.innerHTML = "";
+        main.innerHTML = `<h1 style="text-align:center ; color : white">Game Over </br> ${count}</h1>`
     }
     // console.log(uppper);
     img.style.top = uppper + "px";
 }
-
 
 
