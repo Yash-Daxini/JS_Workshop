@@ -1,1 +1,1 @@
-JavaScript Projects
+DIET JavaScript Projects
